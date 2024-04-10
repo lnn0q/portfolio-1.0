@@ -4,7 +4,7 @@ const Footer = () => {
     <footer>
       <hr />
       <div className="footer__label">
-        &copy; {2024 !== year ? "2024 - " + year : "2024"}
+        &#xf1f9; {2024 !== year ? "2024 - " + year : "2024"}
       </div>
     </footer>
   );

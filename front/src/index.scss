@@ -1,4 +1,7 @@
-$bg: #282A36;
+$bg0: #0e0d11;
+$bg1: #1d1b22;
+// $bg1: #282A36;
+$sd: #1D1B22;
 $fg: #F8F8F2;
 $cl: #44475A;
 $comment: #6272A4;
@@ -6,6 +9,7 @@ $cyan: #8BE9FD;
 $green: #50FA7B;
 $orange: #FFB86C;
 $purple: #BD93F9;
+$super_purple: #7359f8;
 $red: #FF5555;
 $yellow: #F1FA8C;
 
@@ -37,7 +41,7 @@ body {
 
   min-height: 100vh;
 
-  background-color: $bg;
+  background-color: $bg0;
   color: $fg;
 }
 
@@ -59,8 +63,7 @@ header {
 
 .header__previewBox {
   width: 100%;
-  height: 30vh;
-  background-color: $orange;
+  height: 20vh;
   border-radius: 18px;
   overflow: hidden;
   position: relative;
@@ -73,7 +76,8 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20%;
-  border: solid 2px $comment;
+  background-color: $bg1;
+  border: solid 2px $sd;
   border-radius: 18px;
 }
 
@@ -91,21 +95,42 @@ header {
   right: 0;
   display: flex;
   align-items: center;
-  // justify-content: center;
   backdrop-filter: blur(10px);
 }
 
 .header__labelTyped {
   margin-left: 10%;
-  color: $orange;
   font-size: 1.5em;
   font-weight: bold;
 }
 
 main {
-  display: flex;
-  flex-grow: 1;
+  height: 100%;
   padding: 0.5em;
+}
+
+.main--badge {
+  width: 50%;
+  display: flex;
+  padding: 20px;
+  background-color: $bg1;
+  border: solid 2px $sd;
+  border-radius: 18px;
+}
+
+.main--badgeLeft {
+  width: 50%;
+}
+
+.main--profileIcon {
+  width: 125px;
+  height: 125px;
+  background-color: $purple;
+  border-radius: 100%;
+}
+
+.main--badgeRight {
+  width: 50%;
 }
 
 footer {
@@ -118,18 +143,23 @@ footer {
 
 .footer__label {
   font-size: 0.9em;
-  color: $comment;
+  color: $super_purple;
 }
   
 // General elements
 
+mark {
+  color: $super_purple;
+  background: none;
+}
+
 hr {
-    width: 100%;
-    color: $comment;
+  width: 100%;
+  color: $bg1;
 }
 
 a {
-  color: $comment;
+  color: $super_purple;
   text-decoration: none;
 }
 

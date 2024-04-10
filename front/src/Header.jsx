@@ -4,13 +4,13 @@ const Header = () => {
       <div className="header__previewBox">
         <img src="/assets/images/background.jpg" className="header__img" />
         <div className="header__labelModal">
-          <div className="header__labelTyped">Welcome!</div>
+          <div className="header__labelTyped">Hi!</div>
         </div>
       </div>
       <nav className="header__nav">
-        <a href="#1">About</a>
-        <a href="#2">Contacts</a>
-        <a href="#3">Projects</a>
+        <a href="#">About</a>
+        <a href="#">Contacts</a>
+        <a href="#">Projects</a>
       </nav>
     </header>
   );
