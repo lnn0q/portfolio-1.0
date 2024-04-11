@@ -75,6 +75,9 @@ header {
   border-radius: 18px;
   overflow: hidden;
   position: relative;
+  
+  // Cause WebKit sucks
+  -webkit-backdrop-filter: blur(0px);
 }
 
 .header__img {
@@ -171,7 +174,8 @@ mark {
 
 hr {
   width: 100%;
-  color: $bg1;
+  // color: #000;
+  border: 1px solid $bg1;
 }
 
 a {
