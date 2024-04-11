@@ -27,10 +27,18 @@ $yellow: #F1FA8C;
   font-family: 'Symbols Only', 'Courier New', Courier, monospace;
   color-scheme: light dark;
 
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 // Structured elements
@@ -46,7 +54,7 @@ body {
 }
 
 .App {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: space-around;
@@ -69,18 +77,6 @@ header {
   position: relative;
 }
 
-.header__nav {
-  width: 100%;
-  padding: 0.3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20%;
-  background-color: $bg1;
-  border: solid 2px $sd;
-  border-radius: 18px;
-}
-
 .header__img {
   width: 100%;
   height: 100%;
@@ -96,6 +92,7 @@ header {
   display: flex;
   align-items: center;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .header__labelTyped {
@@ -104,14 +101,32 @@ header {
   font-weight: bold;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  padding: 0.5em;
+}
+
+.nav__container {
+  width: 100%;
+  padding: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  background-color: $bg1;
+  border: solid 2px $sd;
+  border-radius: 18px;
+}
+
 main {
-  height: 100%;
+  height: 1000px;
   padding: 0.5em;
 }
 
 .main--badge {
   width: 100%;
-  height: 50%;
+  // height: 50%;
   display: flex;
   padding: 20px;
   background-color: $bg1;
@@ -171,3 +186,7 @@ a:hover {
 a:active {
   opacity: 0.5;
 }
+
+// Cross-compatibility
+
+
